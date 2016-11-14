@@ -72,8 +72,15 @@ public class MainActivity extends AppCompatActivity {
             lvItems = (ListView) rootView.findViewById(R.id.lvItems);
             btn = (Button) rootView.findViewById(R.id.btnAddItem);
 
-            if (pageNr == 2){
+            if (pageNr == 1){
+                btn.setText("Work it!");
+                btn.getBackground().setColorFilter(0xFFFF7474, PorterDuff.Mode.MULTIPLY);
+            } else if (pageNr == 2){
+                btn.setText("Do it!");
+            } else if (pageNr == 3){
+                btn.setText("Shop it!");
                 btn.getBackground().setColorFilter(0xFFA9B6FF, PorterDuff.Mode.MULTIPLY);
+
             }
 
             items = new ArrayList<String>();
@@ -151,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -161,6 +168,8 @@ public class MainActivity extends AppCompatActivity {
                     return "todo1.txt";
                 case 1:
                     return "todo2.txt";
+                case 2:
+                    return "todo3.txt";
             }
             return null;
         }
