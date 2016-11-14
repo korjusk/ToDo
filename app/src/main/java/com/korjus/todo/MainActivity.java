@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             items = new ArrayList<String>();
             readItems();
-            itemsAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, items);
+            itemsAdapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_list_item, items);
             lvItems.setAdapter(itemsAdapter);
 
             btn.setOnClickListener(new View.OnClickListener() {
